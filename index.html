@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Ремонт Быта — Мастер 24/7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-white text-slate-800 antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white">
+    <header
+        class="border-b border-slate-200 dark:border-slate-700 sticky top-0 z-10 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 mobile-res">
+            <div class="flex items-center justify-between gap-2 sm:gap-4">
+                <div class="text-xl sm:text-2xl font-bold tracking-tight">
+                    ⚡️Техно<span class="text-primary">Сервис</span>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <label class="theme-switch flex-shrink-0">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span>🌙</span>
+                            <span>☀️</span>
+                        </span>
+                    </label>
+                    <a href="tel:+998991801993"
+                        class="bg-primary text-white font-semibold rounded-full shadow-lg shadow-primary/30 hover:bg-blue-600 transition flex items-center justify-center">
+                        <span class="hidden sm:inline px-5 py-2.5 text-base">📞 +998 99 180 19 93</span>
+                        <span class="sm:hidden px-3.5 py-2.5 text-[12px]">📞+998 99 180 19 93</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16 text-center">
+        <h1
+            class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
+            Ремонт <span class="text-primary border-b-4 border-blue-500/30">бытовой</span><br>техники на дому
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mt-4 sm:mt-6">
+            Холодильник, стиралка, кондиционер или плита — чиним быстро, даём гарантию до 2 лет.
+        </p>
+        <div class="mt-8">
+            <a href="tel:+79001234567"
+                class="inline-block bg-primary text-white font-semibold text-lg px-8 py-4 rounded-full shadow-xl shadow-primary/40 hover:bg-blue-600 hover:-translate-y-1 transition transform">
+                🛠️ Позвонить мастеру
+            </a>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-6 md:py-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center tracking-tight mb-10 text-slate-900 dark:text-white">Наши
+            услуги</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6" id="services-grid">
+
+            <div
+                class="service-card bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&h=400&fit=crop"
+                    alt="Холодильник" class="w-full h-32 sm:h-48 object-cover">
+                <div class="p-3 sm:p-6 text-center">
+                    <h3 class="text-lg sm:text-2xl font-bold mb-1 text-slate-900 dark:text-white">Ремонт холодильников
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-2 sm:mb-3">Не морозит, шумит,
+                        течёт</p>
+                    <span
+                        class="inline-block bg-blue-50 dark:bg-blue-900/50 text-primary text-xs sm:text-sm font-medium px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-200 dark:border-blue-500/30">Выезд
+                        0₽</span>
+                </div>
+            </div>
+
+            <div
+                class="service-card bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&h=400&fit=crop"
+                    alt="Стиральная машина" class="w-full h-32 sm:h-48 object-cover">
+                <div class="p-3 sm:p-6 text-center">
+                    <h3 class="text-lg sm:text-2xl font-bold mb-1 text-slate-900 dark:text-white">Ремонт стиральных
+                        машин</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-2 sm:mb-3">Не сливает, не греет,
+                        прыгает</p>
+                    <span
+                        class="inline-block bg-blue-50 dark:bg-blue-900/50 text-primary text-xs sm:text-sm font-medium px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-200 dark:border-blue-500/30">Гарантия
+                        1 год</span>
+                </div>
+            </div>
+
+            <div
+                class="service-card bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 overflow-hidden">
+                <img src="https://fastrust.ru/upload/iblock/54b/qusqiycbp0p2zybemmvbiefc32em7o1y/3eaa48bdcc50153e6adbb457cf737cf5.jpeg"
+                    alt="Кондиционер" class="w-full h-32 sm:h-48 object-cover">
+                <div class="p-3 sm:p-6 text-center">
+                    <h3 class="text-lg sm:text-2xl font-bold mb-1 text-slate-900 dark:text-white">Ремонт кондиционеров
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-2 sm:mb-3">Заправка, чистка,
+                        ремонт</p>
+                    <span
+                        class="inline-block bg-blue-50 dark:bg-blue-900/50 text-primary text-xs sm:text-sm font-medium px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-200 dark:border-blue-500/30">Срочный
+                        выезд</span>
+                </div>
+            </div>
+
+            <div
+                class="service-card bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/GE_Profile_stove.JPG/960px-GE_Profile_stove.JPG"
+                    alt="Газовая плита" class="w-full h-32 sm:h-48 object-cover">
+                <div class="p-3 sm:p-6 text-center">
+                    <h3 class="text-lg sm:text-2xl font-bold mb-1 text-slate-900 dark:text-white">Ремонт газовых плит
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-2 sm:mb-3">Не зажигается, коптит
+                    </p>
+                    <span
+                        class="inline-block bg-blue-50 dark:bg-blue-900/50 text-primary text-xs sm:text-sm font-medium px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-200 dark:border-blue-500/30">Мастер
+                        газовщик</span>
+                </div>
+            </div>
+
+            <div
+                class="service-card bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=800&h=400&fit=crop"
+                    alt="Электроплита" class="w-full h-32 sm:h-48 object-cover">
+                <div class="p-3 sm:p-6 text-center">
+                    <h3 class="text-lg sm:text-2xl font-bold mb-1 text-slate-900 dark:text-white">Ремонт электроплит
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-2 sm:mb-3">Не греет конфорка,
+                        духовка</p>
+                    <span
+                        class="inline-block bg-blue-50 dark:bg-blue-900/50 text-primary text-xs sm:text-sm font-medium px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-200 dark:border-blue-500/30">Оригинальные
+                        запчасти</span>
+                </div>
+            </div>
+
+            <div
+                class="service-card bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop"
+                    alt="Посудомоечная машина" class="w-full h-32 sm:h-48 object-cover">
+                <div class="p-3 sm:p-6 text-center">
+                    <h3 class="text-lg sm:text-2xl font-bold mb-1 text-slate-900 dark:text-white">Ремонт посудомоек</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mb-2 sm:mb-3">Протечки, ошибки на
+                        дисплее</p>
+                    <span
+                        class="inline-block bg-blue-50 dark:bg-blue-900/50 text-primary text-xs sm:text-sm font-medium px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-200 dark:border-blue-500/30">Диагностика
+                        в подарок</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-[35px] md:py-[40px] md:pb-[80px]">
+        <div
+            class="bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 p-8 md:p-12 rounded-[3rem] shadow-2xl text-center border border-slate-200 dark:border-slate-700">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Нужен срочный ремонт?</h2>
+            <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-xl mx-auto">Звоните прямо сейчас — приедем в
+                течение часа. Работаем без выходных.</p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <a href="tel:+998991801993"
+                    class="flex-1 bg-primary hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition shadow-lg shadow-primary/40 text-center">
+                    📞 Позвонить
+                </a>
+            </div>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-6">Или напишите в WhatsApp: <a
+                    href="https://wa.me/+998991801993" class="underline font-medium hover:text-primary">+998 99 180 19
+                    93</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="border-t border-slate-200 dark:border-slate-700 py-8 text-slate-500 dark:text-slate-400 text-sm text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>© 2026 РемБыт. Ремонт холодильников, стиральных машин, кондиционеров, газовых и электроплит.</p>
+            <p class="mt-3">📞 Единый номер: +998 99 180 19 93</p>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+
+    <script>
+        (function () {
+            window.addEventListener('load', function () {
+                if (typeof gsap === 'undefined') {
+                    console.log('GSAP не загрузился, но сайт работает');
+                    return;
+                }
+
+                const cards = document.querySelectorAll('.service-card');
+
+                gsap.set(cards, { opacity: 0, y: 30 });
+                gsap.set('h1, h2, p, .hero-btn, footer', { opacity: 0, y: 20 });
+
+                const tl = gsap.timeline();
+
+                tl.to('h1', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' })
+                    .to('p', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
+                    .to('.hero-btn', { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.2)' }, '-=0.2')
+                    .to('h2', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.1');
+
+                gsap.to(cards, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    stagger: 0.08,
+                    ease: 'back.out(1.2)',
+                    delay: 0.3
+                });
+
+                gsap.to('footer', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    ease: 'power2.out',
+                    delay: 0.8
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
