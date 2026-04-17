@@ -91,7 +91,7 @@ html:not(.dark) .slider {
     }
 
     .pulse-button {
-        background-color: #22c55e !important; /* Насыщенный зеленый */
+        background-color: #22c55e !important;
         animation: green-glow 1.5s infinite ease-in-out;
         display: inline-flex;
         align-items: center;
