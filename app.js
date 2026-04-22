@@ -25,3 +25,15 @@
         });
     }
 })();
+
+
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-18112403909'
+            });
+            console.log('Событие звонка отправлено в Google Ads');
+        }
+    });
+});
